@@ -1,8 +1,8 @@
 # Capstone Projects
 
-* [Product Search API]()
-* [Fraud Detection Project]()
-* [Subscription Management App]()
+* [Product Search API](https://github.com/MoonHighway/ts-aws-capstone-projects/blob/main/01-product-search.md)
+* [Fraud Detection Project](https://github.com/MoonHighway/ts-aws-capstone-projects/blob/main/02-fraud-detection.md)
+* [Subscription Management App](https://github.com/MoonHighway/ts-aws-capstone-projects/blob/main/03-subscription-management.md)
 
 
 ## Questions?
