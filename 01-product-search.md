@@ -83,7 +83,7 @@ Feeling ambitious? Try adding one (or all) of these enhancements:
 ## Submission Requirements  
 - **GitHub Repo** – Include `index.ts` (your Lambda function) and `README.md` with instructions.  
 - **Deployed API Link (optional)** – Share your API Gateway URL so others can test it.  
-- **Short Write-Up** – Briefly explain your approach and any extra features you added.  
+- **Short Demo** – Be ready to show your system working live during presentation. 
 
 ---
 

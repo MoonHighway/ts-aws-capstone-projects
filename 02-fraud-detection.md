@@ -1,7 +1,7 @@
 # Capstone Project: Real-time Fraud Detection System
 
 ## Objective  
-Your mission: Build a **serverless real-time fraud detection system** for e-commerce transactions using **TypeScript, AWS Lambda, DynamoDB, and Kinesis**, with **Datadog** for monitoring and observability.
+Your mission: Build a serverless real-time fraud detection system for e-commerce transactions using TypeScript, AWS Lambda, DynamoDB, and Kinesis.
 
 ## Tech Stack  
 - **TypeScript** - Strong typing, well-defined interfaces for transaction data modeling.  
@@ -28,7 +28,7 @@ This project focuses on building a serverless fraud detection system that analyz
 ---
 
 ## Sample Transaction Data  
-To test your **fraud detection system**, use the following sample dataset.
+To test your fraud detection system, use the following sample dataset.
 
 <details>
   <summary>Click to expand sample data 📂 </summary>
@@ -93,7 +93,7 @@ To test your **fraud detection system**, use the following sample dataset.
 ---
 
 ## Fraud Detection Rules  
-Implement at least two of these basic rules to flag potentially fraudulent transactions:
+Implement at least two of these rules to flag potentially fraudulent transactions:
 
 1. **Unusual Amount** – Transaction amount significantly higher than user's average.
 2. **Location Mismatch** – Billing and shipping postal codes don't match.
@@ -112,7 +112,7 @@ Want to enhance your fraud detection system? Try adding:
 
 ## Submission Requirements  
 - **GitHub Repo** – Include your TypeScript code and a basic `README.md`.
-- **Simple Diagram** – Sketch how your components connect (can be hand-drawn).
+- **Simple Diagram** – Sketch how your components connect.
 - **Short Demo** – Be ready to show your system working live during presentation.
 
 ---

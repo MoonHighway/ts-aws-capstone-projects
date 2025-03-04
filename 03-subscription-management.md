@@ -151,8 +151,9 @@ Ready to make your subscription system even more powerful? Try adding:
 ## Submission Requirements  
 - **GitHub Repo** – Include your TypeScript Lambda functions, Step Functions definition, and thorough documentation.
 - **System Design Document** – Explain your data model and workflow orchestration.
+- **Short Demo** – Be ready to show your system working live during presentation.
 
 ---
 
-This project will give you practical experience with subscription business models and serverless architecture. The project is designed to be completed in 2-3 hours, so keep your implementation focused and simple. Start with the core requirements before tackling any extra features.
+This project will give you practical experience with subscription business models and serverless architecture. 
 
