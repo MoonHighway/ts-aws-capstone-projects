@@ -1,33 +1,47 @@
-# Capstone Project: Subscription Management System
+# Capstone Project: Serverless Subscription Management System
 
 ## Objective  
-Your mission: Build a **serverless subscription management system** that handles recurring payments, subscriber tracking, and lifecycle events using **TypeScript, AWS Lambda, DynamoDB, and Step Functions**, with **Datadog** for monitoring.
+Your mission: Design a fully serverless subscription management system using AWS Lambda, API Gateway, DynamoDB, Kinesis, SQS, and SNS to handle recurring payments, subscriber tracking, and lifecycle events.
 
 ## Tech Stack  
 - **TypeScript** - Strong typing for defining subscription models and payment interfaces.  
 - **AWS Lambda** – Process subscription events, payments, and notifications.  
+- **API Gateway** - Create endpoints for subscription management.
 - **DynamoDB** – Store subscriber data, payment history, and subscription status.  
-- **AWS Step Functions** – Orchestrate simple subscription workflows.
+- **AWS Step Functions** – Orchestrate subscription workflows.
+- **Kinesis** - Stream subscription events for real-time processing.
+- **SQS** - Queue subscription tasks for reliable processing.
+- **SNS** - Send notifications about subscription events.
 
 ---
 
 ## Requirements  
 This project focuses on creating a robust subscription management system for a SaaS product. Here's what you'll build:  
 
-- **Subscription API** – Create Lambda functions that:  
-  - Handle subscription creation, updates, and cancellations.
-  - Process recurring payments (simulated).
+- **Subscription Management:** Allow users to subscribe, upgrade, or cancel their plans.
+  - Create endpoints for subscription operations.
+  - Handle plan changes and subscription updates.
+  - Process subscription cancellations and refunds.
+
+- **Recurring Payments:** Automate subscription renewals and manage failed payments.
+  - Schedule recurring payment processing.
+  - Handle payment success and failure scenarios.
+  - Implement retry logic for failed payments.
+
+- **Lifecycle Tracking:** Monitor activation, renewal, expiration, and cancellation events.
   - Track subscription status changes.
+  - Record important lifecycle milestones.
+  - Manage free trial conversions.
 
-- **Subscriber Management** – Use DynamoDB to:  
-  - Store subscriber information and their active subscriptions.
-  - Maintain payment history and subscription tier details.
+- **Event-Driven Processing:** Use AWS services to handle asynchronous workflows efficiently.
+  - Stream subscription events through Kinesis.
+  - Process events using Lambda functions.
+  - Queue tasks using SQS for reliable handling.
 
-- **Simple Workflow** – Implement a basic Step Function to:
-  - Manage subscription status changes (active → canceled or past_due).
-  - Handle basic subscription events.
-
-- **Console Logging** – Add simple logging for subscription operations.
+- **Notification System:** Notify users via SNS about payment failures, renewals, and cancellations.
+  - Configure SNS topics and subscriptions.
+  - Create templates for different notification types.
+  - Trigger notifications based on subscription events.
 
 ---
 
@@ -145,15 +159,17 @@ Ready to make your subscription system even more powerful? Try adding:
 - **Dunning Management** – Implement a payment retry system for failed payments.
 - **Usage-Based Billing** – Add support for metered billing based on API calls or resource usage.
 - **Simple Notifications** – Send basic email notifications for subscription events.
+- **Customer Portal** – Create a simple interface for users to manage their subscriptions.
+- **Reporting Dashboard** – Build analytics for subscription metrics.
 
 ---
 
 ## Submission Requirements  
 - **GitHub Repo** – Include your TypeScript Lambda functions, Step Functions definition, and thorough documentation.
 - **System Design Document** – Explain your data model and workflow orchestration.
+- **Architecture Diagram** – Show how your AWS services connect together.
 - **Short Demo** – Be ready to show your system working live during presentation.
 
 ---
 
-This project will give you practical experience with subscription business models and serverless architecture. 
-
+This project will give you practical experience with subscription business models and serverless architecture.

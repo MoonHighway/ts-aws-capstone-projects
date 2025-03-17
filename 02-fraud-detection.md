@@ -1,29 +1,51 @@
-# Capstone Project: Real-time Fraud Detection System
+# Capstone Project: Real-Time Fraud Detection System Using AWS Serverless
 
 ## Objective  
-Your mission: Build a serverless real-time fraud detection system for e-commerce transactions using TypeScript, AWS Lambda, DynamoDB, and Kinesis.
+Your mission: Build a fully serverless fraud detection system for an e-commerce platform that processes transactions in real-time and detects fraudulent activities using TypeScript, AWS Lambda, API Gateway, Kinesis, DynamoDB, SQS, and SNS.
 
 ## Tech Stack  
 - **TypeScript** - Strong typing, well-defined interfaces for transaction data modeling.  
 - **AWS Lambda** – Process transaction events in real-time, detecting potential fraud.  
+- **API Gateway** - Create RESTful endpoints for transaction submission.
 - **Amazon Kinesis** – Capture and process streaming transaction data.
 - **DynamoDB** – Store transaction records and fraud detection results.
+- **SQS** - Queue suspicious transactions for further review.
+- **SNS** - Send notifications about fraudulent activities.
 
 ---
 
 ## Requirements  
 This project focuses on building a serverless fraud detection system that analyzes e-commerce transactions in real-time. Here's what you'll build:  
 
-- **Transaction Processor** – Create a Lambda function that:  
-  - Consumes transaction events from Kinesis stream.
-  - Applies basic fraud detection rules to each transaction.
-  - Flags suspicious transactions based on predefined criteria.
+- **Transaction Ingestion:** Accept transactions via API Gateway, where customers submit purchases through a REST API.
+  - Create endpoints for transaction submission.
+  - Validate incoming transaction data.
+  - Forward valid transactions for processing.
 
-- **Transaction Storage** – Use DynamoDB to:
-  - Store transaction records with fraud detection results.
-  - Track historical transaction patterns for each user.
+- **Real-Time Processing:** Stream transactions using Kinesis for immediate fraud analysis.
+  - Set up Kinesis data streams for transaction events.
+  - Configure Lambda triggers for stream processing.
+  - Handle high-volume transaction flow.
 
-- **Basic Logging** – Include simple console logging for important events.
+- **Fraud Analysis:** Evaluate transactions in AWS Lambda against predefined fraud detection rules.
+  - Apply at least two fraud detection rules (detailed below).
+  - Calculate risk scores for transactions.
+  - Determine appropriate actions based on analysis.
+
+- **Flagging Mechanism:** Send suspected fraudulent transactions to an SQS queue for further review.
+  - Create queues for different risk levels.
+  - Implement message handling for flagged transactions.
+  - Ensure proper error handling and retries.
+
+- **Data Storage:** Store all transactions (normal and flagged) in DynamoDB for record-keeping.
+  - Design efficient data models for transaction storage.
+  - Implement queries for transaction history retrieval.
+  - Track historical patterns for future reference.
+
+- **Alert System:** Send SNS notifications to the fraud investigation team when a transaction is flagged as fraudulent.
+  - Configure SNS topics and subscriptions.
+  - Format detailed alert messages with relevant transaction data.
+  - Include risk assessment information in alerts.
 
 ---
 
@@ -108,6 +130,9 @@ Want to enhance your fraud detection system? Try adding:
 - **Machine Learning Integration** – Use AWS SageMaker to build a simple ML model for fraud prediction.
 - **Real-time Alerts** – Send notifications (via SNS) when suspicious transactions are detected.
 - **Fraud Score API** – Create an API endpoint to check a transaction's fraud probability.
+- **Admin Dashboard** – Build a simple interface for the fraud team to review flagged transactions.
+- **IP Geolocation** – Incorporate location data to enhance fraud detection rules.
+
 ---
 
 ## Submission Requirements  
@@ -117,5 +142,4 @@ Want to enhance your fraud detection system? Try adding:
 
 ---
 
-This project gives you hands-on experience with serverless architecture and real-time data processing. 
-
+This project gives you hands-on experience with serverless architecture and real-time data processing.
